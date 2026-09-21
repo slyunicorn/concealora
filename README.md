@@ -1,7 +1,6 @@
-# concealora
-Covert LoRa Communication via PHY-Layer Parameter Manipulation and Adaptive Modulation
+# concealora - Covert Parameter-Hopping LoRa (CSS) simulated on MATLAB
 
-# Covert Parameter-Hopping LoRa (CSS) — MATLAB Simulation
+Covert LoRa Communication via PHY-Layer Parameter Manipulation and Adaptive Modulation
 
 A MATLAB simulation of a **covert LoRa-style link** built on Chirp Spread Spectrum (CSS),
 compared side-by-side against a **standard fixed-parameter LoRa link**. The covert scheme
@@ -183,7 +182,7 @@ end
 
 ### Fig. 1 — Spectrogram: Normal vs Covert  ·  *Goal G2*
 
-![Spectrogram comparison](figures/fig_01.png)
+![Spectrogram comparison](showcase/Figure_1.png)
 
 **What it shows.** Two waterfalls of the *received* signal. The normal LoRa plot shows the
 classic diagonal chirp streaks confined to a fixed 125 kHz channel. The covert plot shows energy
@@ -198,7 +197,7 @@ only qualitative, which is exactly why the ROC figures later put a number on it.
 
 ### Fig. 2 — Time Domain: TX vs RX (raw and normalized)  ·  *Goal G1, G4*
 
-![Time domain comparison](figures/fig_02.png)
+![Time domain comparison](showcase/Figure_2.png)
 
 **What it shows.** Top subplot: the transmitted waveform against the received one at true
 amplitude — the received signal is tiny and noise-riddled after path loss. Bottom subplot: the
@@ -213,7 +212,7 @@ time-domain plots are merged here into one figure to avoid redundancy.
 
 ### Fig. 3 — Parameter Hopping (SF and BW per symbol)  ·  *Goal G3*
 
-![Parameter hopping](figures/fig_03.png)
+![Parameter hopping](showcase/Figure_3.png)
 
 **What it shows.** The spreading factor and bandwidth actually used for each symbol index,
 jumping around across the message.
@@ -227,7 +226,7 @@ detectability (G6).
 
 ### Fig. 4 — Intended Link: Distance vs SNR  ·  *Goal G4*
 
-![Distance vs SNR](figures/fig_04.png)
+![Distance vs SNR](showcase/Figure_4.png)
 
 **What it shows.** Received SNR at the *intended* receiver as a function of TX–RX distance,
 following the free-space path-loss law.
@@ -240,7 +239,7 @@ propagation model rather than an abstract SNR knob.
 
 ### Fig. 5 — SNR vs Decoding Success (with error bars)  ·  *Goal G4*
 
-![SNR vs success](figures/fig_05.png)
+![SNR vs success](showcase/Figure_5.png)
 
 **What it shows.** A Monte-Carlo "waterfall": the probability that the *entire message* decodes
 correctly as a function of SNR, with ±1 standard-error (binomial) bars from 50 trials per point.
@@ -254,7 +253,7 @@ line.
 
 ### Fig. 6 — Decode Accuracy by Spreading Factor  ·  *Goal G7*
 
-![Accuracy by SF](figures/fig_06.png)
+![Accuracy by SF](showcase/Figure_6.png)
 
 **What it shows.** Per-*symbol* decode accuracy versus SNR, drawn as one curve per spreading
 factor present in the hop schedule.
@@ -268,7 +267,7 @@ behaves as CSS theory predicts and explains *why* adaptive spreading factor is w
 
 ### Fig. 7 — Eavesdropper ROC: Normal vs Covert  ·  *Goal G6*
 
-![Energy detector ROC](figures/fig_07.png)
+![Energy detector ROC](showcase/Figure_7.png)
 
 **What it shows.** ROC curves (Pd vs Pfa) for a channelized energy detector trying to detect the
 signal in a standard 125 kHz LoRa channel, for both the normal and covert waveforms, with the
@@ -284,7 +283,7 @@ into a real detection-theory number.
 
 ### Fig. 8 — Detection Probability vs Eavesdropper Distance  ·  *Goal G6*
 
-![Pd vs eavesdropper distance](figures/fig_08.png)
+![Pd vs eavesdropper distance](showcase/Figure_8.png)
 
 **What it shows.** At a fixed 1% false-alarm rate, the probability that the energy detector flags
 the signal, as a function of how far the eavesdropper is from the transmitter — for both
@@ -299,7 +298,7 @@ transmission — a directly meaningful measure of "how stealthy."
 
 ### Fig. 9 — TX Power vs Detection Probability  ·  *Goal G6*
 
-![TX power vs Pd](figures/fig_09.png)
+![TX power vs Pd](showcase/Figure_9.png)
 
 **What it shows.** Detection probability (fixed 1% false-alarm rate) as transmit power is swept
 across five orders of magnitude, for both waveforms, at the fixed eavesdropper distance.
